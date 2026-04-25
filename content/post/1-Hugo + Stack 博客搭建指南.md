@@ -1,3 +1,11 @@
+---
+title: "第一篇文章"
+date: 2026-04-25
+categories: ["类别：工具"]
+tags: ["标签：test"]
+author: "hanmei765-max"
+---
+
 # 🚀 Hugo + Stack 博客搭建指南
 
 > 一份让**完全不懂技术**的人也能快速搭建个人博客的实战教程  
@@ -80,7 +88,6 @@ git push -u origin main
 打开**命令行/Terminal**，输入以下命令：
 
 ```bash
-
 # 检查Git
 git --version
 
@@ -95,10 +102,12 @@ hugo version
 ## 2. GitHub仓库创建
 
 ### 步骤2.1：登录GitHub
+
 1. 访问 https://github.com
 2. 点击 **Sign up** 注册账号（已有账号则登录）
 
 ### 步骤2.2：创建新仓库
+
 1. 点击右上角 **+** → **New repository**
 2. 填写信息：
    - **Repository name**: `你的用户名.github.io`（必须是这个格式）
@@ -107,9 +116,10 @@ hugo version
 3. 点击 **Create repository**
 
 ### 步骤2.3：获取仓库地址
-创建成功后，复制仓库地址（例如）：
-```
 
+创建成功后，复制仓库地址（例如）：
+
+```
 https://github.com/ 你的用户名/你的用户名.github.io.git
 ```
 
@@ -124,7 +134,6 @@ https://github.com/ 你的用户名/你的用户名.github.io.git
 Stack主题位于 `themes` 文件夹下：
 
 ```bash
-
 cd D:/hugoblog
 git clone https://github.com/CaiJimmy/hugo-theme-stack.git  themes/stack
 ```
@@ -153,7 +162,6 @@ defaultContentLanguage = "zh-cn"
 ### 步骤3.3：创建第一篇文档
 
 ```bash
-
 # 创建文章
 hugo new posts/你好世界.md
 ```
@@ -163,7 +171,6 @@ hugo new posts/你好世界.md
 打开 `content/posts/你好世界.md`，输入以下内容：
 
 ```markdown
-
 ---
 title: "第一篇文章"
 date: 2026-04-25
@@ -192,7 +199,6 @@ author: "hanmei765-max"
 在命令行输入：
 
 ```bash
-
 hugo server -D --buildDrafts
 ```
 
@@ -202,8 +208,8 @@ hugo server -D --buildDrafts
 ### 访问本地博客
 
 浏览器打开：
-```
 
+```
 http://localhost:1313 
 ```
 
@@ -216,7 +222,6 @@ http://localhost:1313
 ### 步骤7.1：生成静态文件
 
 ```bash
-
 hugo
 ```
 
@@ -225,7 +230,6 @@ hugo
 ### 步骤7.2：推送到GitHub
 
 ```bash
-
 git add .
 git commit -m "提交博客"
 git push
@@ -243,8 +247,8 @@ git push
 ### 步骤7.4：等待部署完成
 
 1-2分钟后访问：
-```
 
+```
 https://你的用户名.github.io
 ```
 
@@ -253,20 +257,25 @@ https://你的用户名.github.io
 ## 8. 常见问题
 
 ### Q1: `hugo: command not found`
+
 **解决方法**：安装Hugo后，需要将安装路径添加到环境变量
 
 ### Q2: 主题样式不显示
+
 **解决方法**：确保 `themes/stack` 文件夹存在且未损坏
 
 ### Q3: 部署后页面为空白
+
 **解决方法**：
+
 1. 检查 `hugo.toml` 中的 `baseURL` 是否与你仓库地址一致
 2. 在仓库Settings→Pages中查看部署日志
 
 ### Q4: 如何发布新文章
-**解决方法**：
-```bash
 
+**解决方法**：
+
+```bash
 hugo new posts/文章标题.md
 # 编辑内容
 # 重新生成和推送
@@ -274,9 +283,10 @@ hugo && git add . && git commit -m "更新" && git push
 ```
 
 ### Q5: 本地预览与部署不一致
-**解决方法**：清理缓存重新生成
-```bash
 
+**解决方法**：清理缓存重新生成
+
+```bash
 hugo server --minify
 ```
 
@@ -285,7 +295,6 @@ hugo server --minify
 ## 📁 项目结构说明
 
 ```
-
 你的用户名.github.io/
 ├── content/           # 文章内容
 │   └── posts/        # 文章文件夹
@@ -315,6 +324,7 @@ hugo server --minify
 现在你已经成功搭建了一个个人技术博客！
 
 接下来可以：
+
 1. 📝 持续更新文章
 2. 🎨 自定义主题样式
 3. 🔧 添加插件和扩展功能
@@ -326,3 +336,8 @@ hugo server --minify
 > **提示**：遇到问题可以查看Stack主题官方文档：https://stack.jimmycai.com/
 
 ```
+
+```
+
+
+
