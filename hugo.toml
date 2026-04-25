@@ -8,3 +8,17 @@ theme = "PaperMod"
   disableThemeToggle = false
   showReadingTime = true
   author = "hanmei765-max"
+
+  # 柔和护眼配色（适合长时间看代码/笔记）
+  [params.theme]
+    light = "#f5f5f5"       # 背景改成柔和米白
+    dark = "#1a1a2e"        # 深色模式改成柔和深灰
+    textLight = "#333333"   # 文字柔和黑
+    textDark = "#e0e0e0"    # 文字柔和白
+    accent = "#4a6fa5"      # 主色调用柔和蓝色（科技感+护眼）
+
+  # 开启文章目录、代码高亮（嵌入式笔记必备）
+  [params.features]
+    enableToc = true
+    enableHighlight = true
+    highlightTheme = "github-dark" # 代码高亮配色柔和不刺眼
