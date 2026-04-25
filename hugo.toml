@@ -1,24 +1,15 @@
 baseURL = "https://hanmei765-max.github.io/"
-languageCode = "zh-cn"
-title = "我的嵌入式技术博客"
-theme = "PaperMod"
+title = "嵌入式技术总结"
+theme = "stack"
+
+# 默认语言
+defaultContentLanguage = "zh-cn"
 
 [params]
-  defaultTheme = "auto"
-  disableThemeToggle = false
-  showReadingTime = true
   author = "hanmei765-max"
+  description = "记录嵌入式Linux、驱动开发与RTOS学习笔记"
 
-  # 柔和护眼配色（适合长时间看代码/笔记）
-  [params.theme]
-    light = "#f5f5f5"       # 背景改成柔和米白
-    dark = "#1a1a2e"        # 深色模式改成柔和深灰
-    textLight = "#333333"   # 文字柔和黑
-    textDark = "#e0e0e0"    # 文字柔和白
-    accent = "#4a6fa5"      # 主色调用柔和蓝色（科技感+护眼）
+[permalinks]
+  post = "/p/:slug/"
+  page = "/:slug/"
 
-  # 开启文章目录、代码高亮（嵌入式笔记必备）
-  [params.features]
-    enableToc = true
-    enableHighlight = true
-    highlightTheme = "github-dark" # 代码高亮配色柔和不刺眼

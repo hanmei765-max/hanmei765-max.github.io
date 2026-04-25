@@ -1,7 +1,5 @@
 ```gitignore
 
-# Hugo生成的静态文件
-public/
 
 # Hugo缓存
 hugo.cache/

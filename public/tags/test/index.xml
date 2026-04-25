@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Test on 嵌入式技术总结</title>
+        <link>http://localhost:1313/tags/test/</link>
+        <description>Recent content in Test on 嵌入式技术总结</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>First Blog</title>
+            <link>http://localhost:1313/p/first-blog/</link>
+            <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+            <guid>http://localhost:1313/p/first-blog/</guid>
+            <description>&lt;p&gt;这是我写的第一篇技术博客文章！&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么写博客&#34;&gt;为什么写博客？&#xD;&#xA;&lt;/h2&gt;&lt;ol&gt;&#xA;&lt;li&gt;记录学习历程&lt;/li&gt;&#xA;&lt;li&gt;分享技术心得&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;下一步&#34;&gt;下一步&#xD;&#xA;&lt;/h2&gt;</description>
+        </item></channel>
+</rss>
