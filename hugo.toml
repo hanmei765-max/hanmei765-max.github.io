@@ -1,0 +1,10 @@
+baseURL = "https://hanmei765-max.github.io/"
+languageCode = "zh-cn"
+title = "我的嵌入式技术博客"
+theme = "PaperMod"
+
+[params]
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  showReadingTime = true
+  author = "hanmei765-max"
