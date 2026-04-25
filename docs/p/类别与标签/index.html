@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="嵌入式博客 - 最常用的5个类别与标签\r📋 核心分类体系\r1. 嵌入式 Linux\r标签 说明 #嵌入式Linux Linux内核与系统开发 #Ubuntu 嵌入式开发环境 #ARM架构 ARM平台开发 #内核移植 内核裁剪与移植 #文件系统 根文件系统构建 #Bootloader U-Boot配置与开发 2. 驱动开发\r标签 说明 #字符驱动 字符设备驱动开发 #平台驱动 平台总线驱动模型 #I2C驱动 I2C总线驱动 #SPI驱动 SPI总线驱动 #GPIO驱动 GPIO设备驱动 #输入驱动 触摸屏/按键驱动 3. RTOS实时系统\r标签 说明 #FreeRTOS 免费实时操作系统 #RT-Thread 国产实时操作系统 #uC/OS 经典实时内核 #RTOS调度 实时任务调度 #任务同步 信号量/消息队列 #RTOS移植 端口移植与适配 4. 硬件基础\r标签 说明 #ARM处理器 ARM内核架构 #硬件原理 电路原理图分析 #PCB设计 电路板设计基础 #开发板 嵌入式开发硬件 #电路调试 硬件调试方法 #传感器 传感器应用开发 5. 通信与协议\r标签 说明 #网络编程 TCP/IPsocket编程 #Modbus 工业通信协议 #MQTT 物联网消息协议 #串口通信 UART串口调试 #CAN总线 汽车/工业通信 #BLE/WiFi 无线通信技术 🎯 分类结构\r嵌入式技术 /\r├── 嵌入式 Linux /\r│ ├── 系统移植\r│ ├── 内核开发\r│ └── 驱动开发\r├── RTOS开发 /\r│ ├── FreeRTOS\r│ ├── RT-Thread\r│ └── 实时调度\r├── 硬件基础 /\r│ ├── ARM架构\r│ ├── 电路设计\r│ └── 开发实战\r├── 通信协议 /\r│ ├── 网络编程\r│ ├── IoT协议\r│ └── 工业总线\r└── 部署运维 /\r├── Docker\r├── CI/CD\r└── 自动化部署 📊 标签使用建议\r优先级 标签类型 使用建议 P0 技术领域 #嵌入式Linux #驱动开发 #RTOS P0 平台 #ARM #Linux #FreeRTOS P1 开发工具 #VSCode #Makefile #GDB P1 协议/接口 #I2C #SPI #UART #MQTT P2 应用场景 #IoT #工业控制 #智能家居 ⚠️ 注意事项\r标签统一：如&quot;Linux&quot;与&quot;linux&quot;统一为大写 避免过度细分：一个标签下文章≥3篇才值得单独分类 保持平衡：技术深度文章与应用实践文章比例约为 7:3 系列化：同主题文章使用相同标签，形成内容关联 ">
+<title>类别与标签</title>
+
+
+<link rel="canonical" href="https://hanmei765-max.github.io/p/%E7%B1%BB%E5%88%AB%E4%B8%8E%E6%A0%87%E7%AD%BE/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.389e156f5e9bb13df5a924cfa99dfb9c39f3e01e68d9e146cd65bdae963be145.css"><meta property='og:title' content="类别与标签">
+<meta property='og:description' content="嵌入式博客 - 最常用的5个类别与标签\r📋 核心分类体系\r1. 嵌入式 Linux\r标签 说明 #嵌入式Linux Linux内核与系统开发 #Ubuntu 嵌入式开发环境 #ARM架构 ARM平台开发 #内核移植 内核裁剪与移植 #文件系统 根文件系统构建 #Bootloader U-Boot配置与开发 2. 驱动开发\r标签 说明 #字符驱动 字符设备驱动开发 #平台驱动 平台总线驱动模型 #I2C驱动 I2C总线驱动 #SPI驱动 SPI总线驱动 #GPIO驱动 GPIO设备驱动 #输入驱动 触摸屏/按键驱动 3. RTOS实时系统\r标签 说明 #FreeRTOS 免费实时操作系统 #RT-Thread 国产实时操作系统 #uC/OS 经典实时内核 #RTOS调度 实时任务调度 #任务同步 信号量/消息队列 #RTOS移植 端口移植与适配 4. 硬件基础\r标签 说明 #ARM处理器 ARM内核架构 #硬件原理 电路原理图分析 #PCB设计 电路板设计基础 #开发板 嵌入式开发硬件 #电路调试 硬件调试方法 #传感器 传感器应用开发 5. 通信与协议\r标签 说明 #网络编程 TCP/IPsocket编程 #Modbus 工业通信协议 #MQTT 物联网消息协议 #串口通信 UART串口调试 #CAN总线 汽车/工业通信 #BLE/WiFi 无线通信技术 🎯 分类结构\r嵌入式技术 /\r├── 嵌入式 Linux /\r│ ├── 系统移植\r│ ├── 内核开发\r│ └── 驱动开发\r├── RTOS开发 /\r│ ├── FreeRTOS\r│ ├── RT-Thread\r│ └── 实时调度\r├── 硬件基础 /\r│ ├── ARM架构\r│ ├── 电路设计\r│ └── 开发实战\r├── 通信协议 /\r│ ├── 网络编程\r│ ├── IoT协议\r│ └── 工业总线\r└── 部署运维 /\r├── Docker\r├── CI/CD\r└── 自动化部署 📊 标签使用建议\r优先级 标签类型 使用建议 P0 技术领域 #嵌入式Linux #驱动开发 #RTOS P0 平台 #ARM #Linux #FreeRTOS P1 开发工具 #VSCode #Makefile #GDB P1 协议/接口 #I2C #SPI #UART #MQTT P2 应用场景 #IoT #工业控制 #智能家居 ⚠️ 注意事项\r标签统一：如&quot;Linux&quot;与&quot;linux&quot;统一为大写 避免过度细分：一个标签下文章≥3篇才值得单独分类 保持平衡：技术深度文章与应用实践文章比例约为 7:3 系列化：同主题文章使用相同标签，形成内容关联 ">
+<meta property='og:url' content='https://hanmei765-max.github.io/p/%E7%B1%BB%E5%88%AB%E4%B8%8E%E6%A0%87%E7%AD%BE/'>
+<meta property='og:site_name' content='嵌入式技术总结'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='其他' /><meta property='article:published_time' content='2026-04-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-04-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="类别与标签">
+<meta name="twitter:description" content="嵌入式博客 - 最常用的5个类别与标签\r📋 核心分类体系\r1. 嵌入式 Linux\r标签 说明 #嵌入式Linux Linux内核与系统开发 #Ubuntu 嵌入式开发环境 #ARM架构 ARM平台开发 #内核移植 内核裁剪与移植 #文件系统 根文件系统构建 #Bootloader U-Boot配置与开发 2. 驱动开发\r标签 说明 #字符驱动 字符设备驱动开发 #平台驱动 平台总线驱动模型 #I2C驱动 I2C总线驱动 #SPI驱动 SPI总线驱动 #GPIO驱动 GPIO设备驱动 #输入驱动 触摸屏/按键驱动 3. RTOS实时系统\r标签 说明 #FreeRTOS 免费实时操作系统 #RT-Thread 国产实时操作系统 #uC/OS 经典实时内核 #RTOS调度 实时任务调度 #任务同步 信号量/消息队列 #RTOS移植 端口移植与适配 4. 硬件基础\r标签 说明 #ARM处理器 ARM内核架构 #硬件原理 电路原理图分析 #PCB设计 电路板设计基础 #开发板 嵌入式开发硬件 #电路调试 硬件调试方法 #传感器 传感器应用开发 5. 通信与协议\r标签 说明 #网络编程 TCP/IPsocket编程 #Modbus 工业通信协议 #MQTT 物联网消息协议 #串口通信 UART串口调试 #CAN总线 汽车/工业通信 #BLE/WiFi 无线通信技术 🎯 分类结构\r嵌入式技术 /\r├── 嵌入式 Linux /\r│ ├── 系统移植\r│ ├── 内核开发\r│ └── 驱动开发\r├── RTOS开发 /\r│ ├── FreeRTOS\r│ ├── RT-Thread\r│ └── 实时调度\r├── 硬件基础 /\r│ ├── ARM架构\r│ ├── 电路设计\r│ └── 开发实战\r├── 通信协议 /\r│ ├── 网络编程\r│ ├── IoT协议\r│ └── 工业总线\r└── 部署运维 /\r├── Docker\r├── CI/CD\r└── 自动化部署 📊 标签使用建议\r优先级 标签类型 使用建议 P0 技术领域 #嵌入式Linux #驱动开发 #RTOS P0 平台 #ARM #Linux #FreeRTOS P1 开发工具 #VSCode #Makefile #GDB P1 协议/接口 #I2C #SPI #UART #MQTT P2 应用场景 #IoT #工业控制 #智能家居 ⚠️ 注意事项\r标签统一：如&quot;Linux&quot;与&quot;linux&quot;统一为大写 避免过度细分：一个标签下文章≥3篇才值得单独分类 保持平衡：技术深度文章与应用实践文章比例约为 7:3 系列化：同主题文章使用相同标签，形成内容关联 ">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">嵌入式技术总结</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span></span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E5%85%B6%E4%BB%96/" style="background-color: hsl(52, 60%, 84%); color: hsl(52, 60%, 15%);">
+                其他
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%B1%BB%E5%88%AB%E4%B8%8E%E6%A0%87%E7%AD%BE/">类别与标签</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-04-25T00:00:00Z'>Saturday, April 25, 2026</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+
+    <section class="article-content">
+    
+    
+    <h1 id="嵌入式博客---最常用的5个类别与标签">嵌入式博客 - 最常用的5个类别与标签
+</h1><h2 id="-核心分类体系">📋 核心分类体系
+</h2><h3 id="1-嵌入式-linux">1. <strong>嵌入式 Linux</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>#嵌入式Linux</td>
+          <td>Linux内核与系统开发</td>
+      </tr>
+      <tr>
+          <td>#Ubuntu</td>
+          <td>嵌入式开发环境</td>
+      </tr>
+      <tr>
+          <td>#ARM架构</td>
+          <td>ARM平台开发</td>
+      </tr>
+      <tr>
+          <td>#内核移植</td>
+          <td>内核裁剪与移植</td>
+      </tr>
+      <tr>
+          <td>#文件系统</td>
+          <td>根文件系统构建</td>
+      </tr>
+      <tr>
+          <td>#Bootloader</td>
+          <td>U-Boot配置与开发</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="2-驱动开发">2. <strong>驱动开发</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>#字符驱动</td>
+          <td>字符设备驱动开发</td>
+      </tr>
+      <tr>
+          <td>#平台驱动</td>
+          <td>平台总线驱动模型</td>
+      </tr>
+      <tr>
+          <td>#I2C驱动</td>
+          <td>I2C总线驱动</td>
+      </tr>
+      <tr>
+          <td>#SPI驱动</td>
+          <td>SPI总线驱动</td>
+      </tr>
+      <tr>
+          <td>#GPIO驱动</td>
+          <td>GPIO设备驱动</td>
+      </tr>
+      <tr>
+          <td>#输入驱动</td>
+          <td>触摸屏/按键驱动</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="3-rtos实时系统">3. <strong>RTOS实时系统</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>#FreeRTOS</td>
+          <td>免费实时操作系统</td>
+      </tr>
+      <tr>
+          <td>#RT-Thread</td>
+          <td>国产实时操作系统</td>
+      </tr>
+      <tr>
+          <td>#uC/OS</td>
+          <td>经典实时内核</td>
+      </tr>
+      <tr>
+          <td>#RTOS调度</td>
+          <td>实时任务调度</td>
+      </tr>
+      <tr>
+          <td>#任务同步</td>
+          <td>信号量/消息队列</td>
+      </tr>
+      <tr>
+          <td>#RTOS移植</td>
+          <td>端口移植与适配</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="4-硬件基础">4. <strong>硬件基础</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>#ARM处理器</td>
+          <td>ARM内核架构</td>
+      </tr>
+      <tr>
+          <td>#硬件原理</td>
+          <td>电路原理图分析</td>
+      </tr>
+      <tr>
+          <td>#PCB设计</td>
+          <td>电路板设计基础</td>
+      </tr>
+      <tr>
+          <td>#开发板</td>
+          <td>嵌入式开发硬件</td>
+      </tr>
+      <tr>
+          <td>#电路调试</td>
+          <td>硬件调试方法</td>
+      </tr>
+      <tr>
+          <td>#传感器</td>
+          <td>传感器应用开发</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="5-通信与协议">5. <strong>通信与协议</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>#网络编程</td>
+          <td>TCP/IPsocket编程</td>
+      </tr>
+      <tr>
+          <td>#Modbus</td>
+          <td>工业通信协议</td>
+      </tr>
+      <tr>
+          <td>#MQTT</td>
+          <td>物联网消息协议</td>
+      </tr>
+      <tr>
+          <td>#串口通信</td>
+          <td>UART串口调试</td>
+      </tr>
+      <tr>
+          <td>#CAN总线</td>
+          <td>汽车/工业通信</td>
+      </tr>
+      <tr>
+          <td>#BLE/WiFi</td>
+          <td>无线通信技术</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="-分类结构">🎯 分类结构
+</h2><pre tabindex="0"><code>嵌入式技术 /
+├── 嵌入式 Linux /
+│   ├── 系统移植
+│   ├── 内核开发
+│   └── 驱动开发
+├── RTOS开发 /
+│   ├── FreeRTOS
+│   ├── RT-Thread
+│   └── 实时调度
+├── 硬件基础 /
+│   ├── ARM架构
+│   ├── 电路设计
+│   └── 开发实战
+├── 通信协议 /
+│   ├── 网络编程
+│   ├── IoT协议
+│   └── 工业总线
+└── 部署运维 /
+    ├── Docker
+    ├── CI/CD
+    └── 自动化部署
+</code></pre><h2 id="-标签使用建议">📊 标签使用建议
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>优先级</th>
+          <th>标签类型</th>
+          <th>使用建议</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>P0</strong></td>
+          <td>技术领域</td>
+          <td>#嵌入式Linux #驱动开发 #RTOS</td>
+      </tr>
+      <tr>
+          <td><strong>P0</strong></td>
+          <td>平台</td>
+          <td>#ARM #Linux #FreeRTOS</td>
+      </tr>
+      <tr>
+          <td><strong>P1</strong></td>
+          <td>开发工具</td>
+          <td>#VSCode #Makefile #GDB</td>
+      </tr>
+      <tr>
+          <td><strong>P1</strong></td>
+          <td>协议/接口</td>
+          <td>#I2C #SPI #UART #MQTT</td>
+      </tr>
+      <tr>
+          <td><strong>P2</strong></td>
+          <td>应用场景</td>
+          <td>#IoT #工业控制 #智能家居</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="-注意事项">⚠️ 注意事项
+</h2><ol>
+<li><strong>标签统一</strong>：如&quot;Linux&quot;与&quot;linux&quot;统一为大写</li>
+<li><strong>避免过度细分</strong>：一个标签下文章≥3篇才值得单独分类</li>
+<li><strong>保持平衡</strong>：技术深度文章与应用实践文章比例约为 7:3</li>
+<li><strong>系列化</strong>：同主题文章使用相同标签，形成内容关联</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E5%85%B6%E4%BB%96/">其他</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+        <div class="disqus-container">
+    
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 嵌入式技术总结
+    </section>
+    
+    <section class="powerby">
+         <br />
+        
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
+
+
+    </body>
+</html>
