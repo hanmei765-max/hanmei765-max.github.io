@@ -1,316 +1,350 @@
 ---
 title: "Hugo + Stack 博客搭建指南"
 date: 2026-04-25
-categories: ["类别：#平台搭建"]
+categories: ["平台搭建"]
 tags: ["标签","GitHubPages", "Hugo", "静态网站"]
 author: "hanmei765-max"
 ---
 
-# Hugo + Stack 博客搭建指南
+# Hugo + Stack 博客搭建完整指南
 
-> 一份让**完全不懂技术**的人也能快速搭建个人博客的实战教程  
-> 适合：GitHub Pages + Hugo + Stack主题
+> GitHub Pages + Hugo + Stack 主题部署方案  
+> 涵盖：环境配置、项目结构、docs 目录部署、自动部署策略
+
+
 
 ## 📋 目录
 
-1. [前置准备](#1-前置准备)
-2. [GitHub仓库创建](#2-github仓库创建)
-3. [本地Hugo环境配置](#3-本地hugo环境配置)
-4. [创建项目与文档](#4-创建项目与文档)
-5. [Stack主题导入与配置](#5-stack主题导入与配置)
-6. [本地预览](#6-本地预览)
-7. [部署到GitHub Pages](#7-部署到github-pages)
-8. [常见问题](#8-常见问题)
+1. [前置准备与环境配置](#1-前置准备与环境配置)
+2. [GitHub 仓库创建](#2-github-仓库创建)
+3. [本地 Hugo 环境配置](#3-本地-hugo-环境配置)
+4. [项目结构与主题配置](#4-项目结构与主题配置)
+5. [内容创作与本地预览](#5-内容创作与本地预览)
+6. [GitHub Pages 部署方案](#6-github-pages-部署方案)
+7. [自动部署流程分析](#7-自动部署流程分析)
+8. [常见问题与解决方案](#8-常见问题与解决方案)
+9. [更新发布流程](#9-更新发布流程)
 
 
 
-## 1. 前置准备
+## 1. 前置准备与环境配置
 
-### 需要安装的软件
+### 1.1 软件安装
 
-| 软件     | 作用           | 下载地址             |
-| -- | -- | -- |
+| 软件     | 说明           | 下载链接             |
+| -------- | -------------- | -------------------- |
 | **Git**  | 版本控制工具   | https://git-scm.com/ |
-| **Hugo** | 静态网站生成器 | https://gohugo.io/   |
+| **Hugo** | 静态站点生成器 | https://gohugo.io/   |
 
-### 本地Hugo环境配置：下载Hugo
+### 1.2 Hugo 环境变量配置（Windows）
 
-**Windows用户**：
-
-1. 访问 https://github.com/gohugoio/hugo/releases
-2. 下载 `hugo_extended_*.exe`（完整版，支持SCSS）
-
-**Mac用户**：
+1. 下载 Hugo 解压后，将 `hugo.exe` 所在目录添加至系统环境变量
+2. 打开 **控制面板 → 系统 → 高级系统设置 → 环境变量**
+3. 在 **Path** 中添加 Hugo 安装路径（如：`C:\Program Files\Hugo\`）
+4. 重启命令行，验证：
 
 ```bash
-brew install hugo
-```
-
-**Linux用户**：
-
-```bash
-sudo apt-get install hugo
-```
-
-### 创建项目文件夹
-
-在D盘（或任意盘）创建文件夹，例如：
-
-```
-D:/hugoblog
-```
-
-### 初始化Hugo项目
-
-打开命令行，进入该文件夹：
-
-```bash
-cd D:/hugoblog
-hugo new site mysite
-```
-
-> 如果提示"hugo"不是命令，请将Hugo安装路径添加到系统环境变量中
-
-### 克隆你的GitHub仓库
-
-```bash
-git remote add origin 你的仓库地址
-git checkout -b main
-git push -u origin main
-```
-
-### 验证安装
-
-打开**命令行/Terminal**，输入以下命令：
-
-```bash
-# 检查Git
-git --version
-
-# 检查Hugo
 hugo version
 ```
 
-如果显示版本号，说明安装成功✅
-
-## 2. GitHub仓库创建
-
-### 步骤2.1：登录GitHub
-
-1. 访问 https://github.com
-2. 点击 **Sign up** 注册账号（已有账号则登录）
-
-### 步骤2.2：创建新仓库
-
-1. 点击右上角 **+** → **New repository**
-2. 填写信息：
-   - **Repository name**: `你的用户名.github.io`（必须是这个格式）
-   - **Public**: 勾选公开
-   - 不要勾选"Add README"（会干扰后续步骤）
-3. 点击 **Create repository**
-
-### 步骤2.3：获取仓库地址
-
-创建成功后，复制仓库地址（例如）：
-
-```
-https://github.com/ 你的用户名/你的用户名.github.io.git
-```
-
-## 3. 创建项目与文档
-
-### 步骤3.1：下载Stack主题
-
-Stack主题位于 `themes` 文件夹下：
+### 1.3 验证安装
 
 ```bash
-cd D:/hugoblog
-git clone https://github.com/CaiJimmy/hugo-theme-stack.git  themes/stack
+git --version
+hugo version
 ```
 
-### 步骤3.2：修改配置文件
+> 显示版本号即表示安装成功。
 
-创建或修改 `hugo.toml` 文件：
+
+
+## 2. GitHub 仓库创建
+
+### 2.1 创建规则
+
+| 配置项   | 要求               | 说明           |
+| -------- | ------------------ | -------------- |
+| 仓库命名 | `用户名.github.io` | 必须严格匹配   |
+| 可见性   | Public             | 仅支持公共仓库 |
+| 初始化   | 不勾选 README      | 手动初始化项目 |
+
+### 2.2 仓库地址
+
+```
+https://github.com/ 用户名/用户名.github.io.git
+```
+
+
+
+## 3. 本地 Hugo 环境配置
+
+### 3.1 创建项目
+
+```bash
+hugo new site myblog
+cd myblog
+```
+
+### 3.2 安装 Stack 主题
+
+```bash
+git clone https://github.com/CaiJimmy/hugo-theme-stack.git   themes/stack
+```
+
+## 4. 项目结构与主题配置
+
+### 4.1 标准项目结构
+
+```
+myblog/
+├── content/              # 内容文件
+│   ├── posts/           # 文章目录
+│   └── pages/           # 页面文件
+├── data/                # 数据文件
+├── layouts/             # 模板文件
+├── static/              # 静态资源
+│   ├── css/            # CSS 样式
+│   ├── js/             # JavaScript
+│   └── images/         # 图片资源
+├── themes/              # 主题目录
+│   └── stack/          # Stack 主题
+├── config/              # 配置文件
+├── docs/                # 生成目录（部署目标）
+├── hugo.toml           # 主配置文件
+└── public/             # 可选的 public 目录
+```
+
+### 4.2 修改 `hugo.toml`
 
 ```toml
-baseURL = "个人博客地址"
-title = "嵌入式技术总结"
+baseURL = "https://用户名.github.io/"
+publishDir = "docs"
+title = "个人技术博客"
 theme = "stack"
 
-# 默认语言
 defaultContentLanguage = "zh-cn"
+languageCode = "zh-cn"
 
 [params]
-  author = "hanmei765-max"
-  description = "记录嵌入式Linux、驱动开发与RTOS学习笔记"
+  author = "作者名称"
+  description = "技术文章、学习笔记与项目总结"
+  favicon = "/favicon.ico"
 
 [permalinks]
   post = "/p/:slug/"
   page = "/:slug/"
+
+[services]
+  [services.disqus]
+    enable = false
 ```
 
-### 步骤3.3：创建第一篇文档
+## 5. 内容创作与本地预览
+
+### 5.1 创建文章
 
 ```bash
-# 创建文章
-hugo new posts/你好世界.md
+hugo new posts/文章标题.md
 ```
 
-### 步骤3.4：编辑文章内容
-
-打开 `content/posts/你好世界.md`，输入以下内容：
-
-```markdown
-
-title: "第一篇文章"
-date: 2026-04-25
-categories: ["类别：嵌入式"]
-tags: ["标签：test"]
-author: "hanmei765-max"
-
-
-这是我写的第一篇技术博客文章！
-
-## 为什么写博客？
-
-1. 记录学习历程
-2. 分享技术心得
-
-## 下一步
-
-```
-
-
-
-## 4. 本地预览
-
-### 启动本地服务器
-
-在命令行输入：
+### 5.2 本地预览
 
 ```bash
-hugo server -D --buildDrafts
+hugo server -D --minify
 ```
 
-- `-D`: 包含草稿文章
-- `--buildDrafts`: 包含未发布文章
+访问：`http://localhost:1313`
 
-### 访问本地博客
-
-浏览器打开：
-
-```
-http://localhost:1313 
-```
-
-> 如果看到Stack主题的博客界面，说明配置成功✅
+> `-D` 显示草稿文章，`--minify` 优化输出
 
 
 
-## 7. 部署到GitHub Pages
+## 6. GitHub Pages 部署方案
 
-### 步骤7.1：生成静态文件
+### 6.1 生成静态文件
 
 ```bash
 hugo
 ```
 
-生成完成后，在根目录查看 `public/` 文件夹。
+> 执行后根目录将生成 `docs` 文件夹，即为待部署网站。
 
-### 步骤7.2：推送到GitHub
+### 6.2 提交至 GitHub
 
 ```bash
 git add .
-git commit -m "提交博客"
+git commit -m "初始化博客"
+git push origin main
+```
+
+### 6.3 GitHub Pages 配置
+
+备注：如果是平台自动部署Branch->main Folder->root 如果手动部署Branch->自己代码分支 Folder->docs(docs需配置toml文件 下面有)
+
+进入仓库 → **Settings** → **Pages**
+
+| 配置项 | 值                   |
+| ------ | -------------------- |
+| Source | Deploy from a branch |
+| Branch | main                 |
+| Folder | /docs                |
+
+点击 **Save** 后等待约 1 分钟即可访问。
+
+
+## 7. 自动部署流程分析
+
+### 7.1 自动部署（GitHub Actions）
+
+#### 工作原理
+
+```
+.github/
+└── workflows/
+    └── deploy.yml      # 自动部署工作流
+```
+
+当代码推送至仓库后，GitHub Actions 自动触发部署流程。
+
+#### 不推荐的原因
+
+| 问题           | 说明                          |
+| -------------- | ----------------------------- |
+| **配置复杂**   | 需要理解 YAML 工作流语法      |
+| **依赖网络**   | 部署时网络波动会导致失败      |
+| **调试困难**   | 出错后需查看 Actions 日志     |
+| **与手动冲突** | 手动部署 + 自动部署易产生冲突 |
+| **版本混乱**   | 多路部署导致内容不一致        |
+
+### 7.2 推荐方案：手动部署
+
+| 优势     | 说明               |
+| -------- | ------------------ |
+| 可控性强 | 部署前可验证结果   |
+| 调试简单 | 本地先验证，再推送 |
+| 无需配置 | 无额外工作流文件   |
+| 内容一致 | 单一路径部署       |
+
+### 7.3 如需保留自动部署（可选）
+
+#### 7.3.1 配置 `deploy.yml`
+
+```yaml
+name: Deploy Hugo site to Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+```
+
+#### 7.3.2 配置说明
+
+| 配置项        | 值                    |
+| ------------- | --------------------- |
+| `publish_dir` | `./public`（非 docs） |
+| `theme`       | 保持一致              |
+
+
+
+## 8. 常见问题与解决方案
+
+### 8.1 docs 目录未生成
+
+**错误**：`No such file or directory - docs`
+
+**原因**：未执行 `hugo` 命令
+
+**解决**：
+```bash
+hugo
+git add .
+git commit -m "生成网站文件"
 git push
 ```
 
-### 步骤7.3：启用GitHub Pages
+### 8.2 网站显示旧内容
 
-注意：GitHub Pages分支选择需和你代码实际分支关联
+**原因**：
+- 自动部署未关闭
+- 浏览器缓存
 
-1. 进入仓库 → **Settings**
-2. 左侧菜单 → **Pages**
-3. **Source** 选择 `main` 分支 → **/root**
-4. 点击 **Save**
+**解决**：
+1. 确认已删除或禁用 Actions 工作流
+2. 强制刷新：`Ctrl + Shift + R`
 
-### 步骤7.4：等待部署完成
+### 8.3 public 目录处理
 
-1-2分钟后访问：
+**说明**：配置 `publishDir = "docs"` 后，`public` 目录可安全删除或保留（不影响部署）。
 
+### 8.4 样式丢失或页面空白
+
+**原因**：`baseURL` 配置错误
+
+**修正**：
+```toml
+baseURL = "https://用户名.github.io/"
 ```
-https://你的用户名.github.io
-```
 
+### 8.5 环境变量未生效
 
-
-## 8. 常见问题
-
-### Q1: `hugo: command not found`
-
-**解决方法**：安装Hugo后，需要将安装路径添加到环境变量
-
-### Q2: 主题样式不显示
-
-**解决方法**：确保 `themes/stack` 文件夹存在且未损坏
-
-### Q3: 部署后页面为空白
-
-**解决方法**：
-
-1. 检查 `hugo.toml` 中的 `baseURL` 是否与你仓库地址一致
-2. 在仓库Settings→Pages中查看部署日志
-
-### Q4: 如何发布新文章
-
-**解决方法**：
-
+**解决**：
 ```bash
-hugo new posts/文章标题.md
-# 编辑内容
-# 重新生成和推送
-hugo && git add . && git commit -m "更新" && git push
-```
-
-### Q5: 本地预览与部署不一致
-
-**解决方法**：清理缓存重新生成
-
-```bash
-hugo server --minify
-```
-
-## 📁 项目结构说明
-
-```
-你的用户名.github.io/
-├── content/           # 文章内容
-│   └── posts/        # 文章文件夹
-├── themes/           # 主题文件夹
-│   └── stack/        # Stack主题
-├── layouts/          # 页面模板（可选）
-├── static/           # 静态资源（图片、CSS等）
-├── hugo.toml         # 配置文件
-└── public/           # 生成的静态文件（不要手动修改）
+# Windows：重新打开命令行
+# macOS/Linux：source -/.bashrc 或重启终端
 ```
 
 
 
-## 🚀 快速命令速查
+## 9. 更新发布流程
 
-| 操作         | 命令                       |
-| ------------ | -------------------------- |
-| 创建新文章   | `hugo new posts/文章名.md` |
-| 本地预览     | `hugo server`              |
-| 生成静态文件 | `hugo`                     |
-| 推送到GitHub | `git push`                 |
+每次更新文章，执行以下三步：
 
+| 步骤        | 命令                                            | 说明               |
+| ----------- | ----------------------------------------------- | ------------------ |
+| 1. 创建文章 | `hugo new posts/标题.md`                        | 新建 Markdown 文件 |
+| 2. 生成网站 | `hugo`                                          | 更新 docs 目录     |
+| 3. 提交推送 | `git add . && git commit -m "更新" && git push` | 推送至 GitHub      |
 
-> **提示**：遇到问题可以查看Stack主题官方文档：https://stack.jimmycai.com/
-
-```
-
-```
+> 约 1 分钟后网站自动更新
 
 
+## 📋 常用命令速查
+
+| 操作         | 命令                                            | 说明           |
+| ------------ | ----------------------------------------------- | -------------- |
+| 创建文章     | `hugo new posts/标题.md`                        | 新建文章       |
+| 本地预览     | `hugo server -D --minify`                       | 本地开发预览   |
+| 生成静态文件 | `hugo`                                          | 生成 docs 目录 |
+| 推送更新     | `git add . && git commit -m "更新" && git push` | 推送至 GitHub  |
+| 撤销更改     | `git reset --hard HEAD`                         | 本地回退       |
+
+
+## ⚠️ 关键要点总结
+
+1. **必须执行 `hugo` 命令生成 `docs` 目录**
+2. **GitHub Pages 配置为：分支 + /docs**
+3. **手动部署更推荐：避免自动部署冲突**
+4. **本地预览验证后再推送：降低出错率**
+
+
+> 本文档版本：1.1.0  
+> 最后更新：2026-04-26
 

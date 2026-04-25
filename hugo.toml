@@ -14,5 +14,5 @@ defaultContentLanguage = "zh-cn"
   post = "/p/:slug/"
   page = "/:slug/"
 
-#[params.assets]
-#  customCSS = ["css/extended/custom.css"]
+[params.assets]
+  customCSS = ["css/extended/custom.css"]

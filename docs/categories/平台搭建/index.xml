@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>静态网站 on 嵌入式技术总结</title>
-        <link>http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</link>
-        <description>Recent content in 静态网站 on 嵌入式技术总结</description>
+        <title>平台搭建 on 嵌入式技术总结</title>
+        <link>http://localhost:1313/categories/%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/</link>
+        <description>Recent content in 平台搭建 on 嵌入式技术总结</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" /><item>
             <title>Hugo &#43; Stack 博客搭建指南</title>
             <link>http://localhost:1313/p/hugo--stack-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</link>
             <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
