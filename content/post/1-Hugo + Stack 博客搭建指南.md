@@ -1,17 +1,15 @@
 ---
-title: "第一篇文章"
+title: "Hugo + Stack 博客搭建指南"
 date: 2026-04-25
-categories: ["类别：工具"]
-tags: ["标签：test"]
+categories: ["类别：#平台搭建"]
+tags: ["标签","GitHubPages", "Hugo", "静态网站"]
 author: "hanmei765-max"
 ---
 
-# 🚀 Hugo + Stack 博客搭建指南
+# Hugo + Stack 博客搭建指南
 
 > 一份让**完全不懂技术**的人也能快速搭建个人博客的实战教程  
 > 适合：GitHub Pages + Hugo + Stack主题
-
----
 
 ## 📋 目录
 
@@ -24,14 +22,14 @@ author: "hanmei765-max"
 7. [部署到GitHub Pages](#7-部署到github-pages)
 8. [常见问题](#8-常见问题)
 
----
+
 
 ## 1. 前置准备
 
 ### 需要安装的软件
 
 | 软件     | 作用           | 下载地址             |
-| -------- | -------------- | -------------------- |
+| -- | -- | -- |
 | **Git**  | 版本控制工具   | https://git-scm.com/ |
 | **Hugo** | 静态网站生成器 | https://gohugo.io/   |
 
@@ -81,8 +79,6 @@ git checkout -b main
 git push -u origin main
 ```
 
----
-
 ### 验证安装
 
 打开**命令行/Terminal**，输入以下命令：
@@ -96,8 +92,6 @@ hugo version
 ```
 
 如果显示版本号，说明安装成功✅
-
----
 
 ## 2. GitHub仓库创建
 
@@ -122,10 +116,6 @@ hugo version
 ```
 https://github.com/ 你的用户名/你的用户名.github.io.git
 ```
-
----
-
----
 
 ## 3. 创建项目与文档
 
@@ -171,13 +161,13 @@ hugo new posts/你好世界.md
 打开 `content/posts/你好世界.md`，输入以下内容：
 
 ```markdown
----
+
 title: "第一篇文章"
 date: 2026-04-25
 categories: ["类别：嵌入式"]
 tags: ["标签：test"]
 author: "hanmei765-max"
----
+
 
 这是我写的第一篇技术博客文章！
 
@@ -190,7 +180,7 @@ author: "hanmei765-max"
 
 ```
 
----
+
 
 ## 4. 本地预览
 
@@ -215,7 +205,7 @@ http://localhost:1313
 
 > 如果看到Stack主题的博客界面，说明配置成功✅
 
----
+
 
 ## 7. 部署到GitHub Pages
 
@@ -252,7 +242,7 @@ git push
 https://你的用户名.github.io
 ```
 
----
+
 
 ## 8. 常见问题
 
@@ -290,8 +280,6 @@ hugo && git add . && git commit -m "更新" && git push
 hugo server --minify
 ```
 
----
-
 ## 📁 项目结构说明
 
 ```
@@ -306,7 +294,7 @@ hugo server --minify
 └── public/           # 生成的静态文件（不要手动修改）
 ```
 
----
+
 
 ## 🚀 快速命令速查
 
@@ -317,21 +305,6 @@ hugo server --minify
 | 生成静态文件 | `hugo`                     |
 | 推送到GitHub | `git push`                 |
 
----
-
-## ✨ 最后一步
-
-现在你已经成功搭建了一个个人技术博客！
-
-接下来可以：
-
-1. 📝 持续更新文章
-2. 🎨 自定义主题样式
-3. 🔧 添加插件和扩展功能
-
-祝您运营顺利！🎉
-
----
 
 > **提示**：遇到问题可以查看Stack主题官方文档：https://stack.jimmycai.com/
 

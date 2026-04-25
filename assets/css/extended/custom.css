@@ -1,0 +1,6 @@
+hr {
+    border: none !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, transparent, #3b82f6, #a5f3fc, #3b82f6, transparent) !important;
+    margin: 30px 0 !important;
+}

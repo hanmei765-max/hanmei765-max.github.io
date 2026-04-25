@@ -1,4 +1,5 @@
 baseURL = "https://hanmei765-max.github.io/"
+publishDir = "docs"
 title = "嵌入式技术总结"
 theme = "stack"
 
@@ -13,3 +14,5 @@ defaultContentLanguage = "zh-cn"
   post = "/p/:slug/"
   page = "/:slug/"
 
+#[params.assets]
+#  customCSS = ["css/extended/custom.css"]
