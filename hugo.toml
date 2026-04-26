@@ -16,3 +16,14 @@ defaultContentLanguage = "zh-cn"
 
 [params.assets]
   customCSS = ["css/extended/custom.css"]
+#菜单组件
+[menu]
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "搜索"
+  url = "/search/"
+  weight = 2
